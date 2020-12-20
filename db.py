@@ -9,13 +9,14 @@ class Transaccion(BaseModel):
     formaPago:str
     descripcion: str
 
+"""
 class Ingresos(BaseModel):
-    id_I: int
+   id_I: int
     fechaTransaccion_I:str
     categoria_I: str
     valor_I: float
     descripcion_I: str  
-
+"""
 
     
 transaciones = {
