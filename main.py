@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi import HTTPException
-import db, db1
+import db, db1, db2
 
 from fastapi.middleware.cors import CORSMiddleware
 
