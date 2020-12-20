@@ -21,7 +21,14 @@ class Ingresos(BaseModel):
 transaciones = {
     1: Transaccion (id=1 , fechaTransaccion = "20-11-2020", categoria="Alimentación",valor=200000, formaPago="tarjeta_débito", descripcion= "Almuerzo restaurante Carne de Res"),
     2: Transaccion (id=2 , fechaTransaccion = "22-11-2020", categoria="Vestuario",valor=980000, formaPago="tajerta_crédito", descripcion= "Uniformes dotación trabajadores"),
-    3: Transaccion (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar"),
+    3: Transaccion (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar")
+}
+
+
+transaciones_I = {
+    1: Transaccion (id_I=1 , fechaTransaccion_I = "20-11-2020", categoria_I="Alimentación",valor_I=200000, descripcion= "Almuerzo restaurante Carne de Res"),
+    2: Transaccion (id_I=2 , fechaTransaccion_I = "22-11-2020", categoria_I="Vestuario",valor_I=980000,  descripcion= "Uniformes dotación trabajadores"),
+    3: Transaccion (id_I=3 , fechaTransaccion_I = "01-12-2020", categoria_I="Viveres",valor_I=600000,  descripcion= "Mercado mensual familiar")
 }
 
 
