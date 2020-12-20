@@ -10,9 +10,9 @@ class User(BaseModel):
 
  
 usuarios_DB= {
-#    1: User  (id=1, fechaCreacion = "01-11-2020", nombre="Edwin", NUIP="333333333", email="edwin@mintic.co"),
-#    2: User  (id=2, fechaCreacion = "08-11-2020", nombre="Daniel", NUIP="44444444", email="edwin@mintic.co"),
-#    3: User  (id=3, fechaCreacion = "15-12-2020", Nombre="Fernando", NUIP="55555555", email="edwin@mintic.co"),
+    1: User  (id=1, fechaCreacion = "01-11-2020", nombre="Edwin", NUIP="333333333", email="edwin@mintic.co"),
+    2: User  (id=2, fechaCreacion = "08-11-2020", nombre="Daniel", NUIP="44444444", email="edwin@mintic.co"),
+    3: User  (id=3, fechaCreacion = "15-12-2020", Nombre="Fernando", NUIP="55555555", email="edwin@mintic.co"),
 }
 
 
