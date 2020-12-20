@@ -6,7 +6,7 @@ class User(BaseModel):
     fechaCreacion:str
     Nombre: str
     NUIP: str
-    email: str
+    Uemail: str
 
  
 usuarios_DB= {
