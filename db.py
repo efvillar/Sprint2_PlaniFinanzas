@@ -53,3 +53,11 @@ def agregar_transaccion(transaccion: Transaccion):
         transaciones[transaccion.id]= transaccion
         return True
 
+        
+
+def obtener_Transaciones_I():
+    #haga lo que tenga que hacer para conectarse a la base de datos y obtner todas las ordenes
+    lista_transacciones_I=[]
+    for i in transaciones_I:
+        lista_transacciones_I.append(transaciones_I[i])
+    return lista_transacciones_I
