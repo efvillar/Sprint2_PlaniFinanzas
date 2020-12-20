@@ -25,7 +25,7 @@ def obtener_Transaciones_I():
         lista_transacciones_I.append(transaciones_I[i])
     return lista_transacciones_I
 
-""
+"""
 def agregar_transaccion_I(transaccion: Transaccion_I):
     if transaccion.id in transaciones_I:
         return False
