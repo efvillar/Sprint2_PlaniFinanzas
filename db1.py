@@ -10,7 +10,7 @@ class Transaccion_I(BaseModel):
     descripcion_I: str 
 
 
-
+"""
 transaciones_I = {
     1: Transaccion_I (id_I=3 , fechaTransaccion_I = "01-12-2020", categoria_I="salario",valor_I=2000000,  descripcion= "Quincena 1"),
     2: Transaccion_I (id_I=2 , fechaTransaccion_I = "08-12-2020", categoria_I="prima",valor_I=1200000,  descripcion= "Prima de Diciembre"),
@@ -31,3 +31,4 @@ def agregar_transaccion_I(transaccion: Transaccion_I):
     else:
         transaciones_I[transaccion_I.id]= transaccion
         return True
+"""
