@@ -34,19 +34,3 @@ async  def agregar_transaccion(transaccion:db.Transaccion):
         return {"mensaje":"Transacción agregada exitosamente"}
     else:
         raise  HTTPException(status_code=400, detail="Error, el id de la transaccion y existe ")
-
-"""
-
-@app.get("/ingresos/")
-async def obtener_ingresos():
-    ingresos = db.obtener_ingresos()
-    return  ingresos
-
-@app.post("/ingresos/crear/")
-async def crear_ingreso(ingreso: db.Ingreso):
-    creada_exitosamente = db.crear_ingreso(ingreso)
-    if creada_exitosamente:
-        return {"mensaje": "Ingreso creado correctamente"}
-    else:
-        raise HTTPException(status_code=400, detail="error, ingreso con ese id ya existe")
-"""
