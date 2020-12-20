@@ -50,3 +50,9 @@ async  def agregar_transaccion_I(transaccion:db1.Transaccion_I):
     else:
         raise  HTTPException(status_code=400, detail="Error, el id de la transaccion de ingreso y existe ")
 
+
+@app.get("/usuarios/")
+async def obtener_Usuarios():
+    usuarios_DB = db2.obtener_Usuarios()
+    return usuarios_DB
+
