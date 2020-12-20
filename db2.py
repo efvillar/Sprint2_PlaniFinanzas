@@ -19,7 +19,7 @@ usuarios_DB= {
 def obtener_Usuarios():
     #haga lo que tenga que hacer para conectarse a la base de datos y obtner todas las ordenes
     lista_usuarios=[]
-    for u in User:
+    for u in usuarios_DB:
         lista_usuarios.append(usuarios_DB[u])
     return lista_usuarios
 
