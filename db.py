@@ -9,6 +9,13 @@ class Transaccion(BaseModel):
     formaPago:str
     descripcion: str
 
+class Ingresos(BaseModel):
+    id_I: int
+    fechaTransaccion_I:str
+    categoria_I: str
+    valor_I: float
+    descripcion_I: str  
+
 
     
 transaciones = {
@@ -16,6 +23,8 @@ transaciones = {
     2: Transaccion (id=2 , fechaTransaccion = "22-11-2020", categoria="Vestuario",valor=980000, formaPago="tajerta_crédito", descripcion= "Uniformes dotación trabajadores"),
     3: Transaccion (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar"),
 }
+
+
 
 
 def obtener_Transaciones():
