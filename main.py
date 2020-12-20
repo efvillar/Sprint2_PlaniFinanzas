@@ -35,7 +35,7 @@ async  def agregar_transaccion(transaccion:db.Transaccion):
     else:
         raise  HTTPException(status_code=400, detail="Error, el id de la transaccion y existe ")
 
-
+"""
 @app.get("/ingresos/")
 async def obtener_transacciones_I():
     transacciones_I = db1.obtener_Transaciones_I()
@@ -48,3 +48,4 @@ async  def agregar_transaccion_I(transaccion:db1.Transaccion_I):
         return {"mensaje":"Transacción agregada exitosamente"}
     else:
         raise  HTTPException(status_code=400, detail="Error, el id del ingreso y existe ")
+"""
