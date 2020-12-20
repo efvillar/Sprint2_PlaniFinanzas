@@ -46,7 +46,7 @@ def crear_egreso(egreso: Egreso):
 
 
 
-
+"""
 
 def obtener_ingresos():
     #haga lo que tenga que hacer para conectarse a la base de datos
@@ -61,3 +61,4 @@ def crear_ingresos(ingreso: Ingreso):
     else:
         ingresos[ingreso.id] = ingreso
         return True
+"""

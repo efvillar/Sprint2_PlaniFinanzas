@@ -16,6 +16,8 @@ async def crear_egreso(egreso: db.Egreso):
     else:
         raise HTTPException(status_code=400, detail="error, egreso con ese id ya existe")
 
+"""
+
 @app.get("/ingresos/")
 async def obtener_ingresos():
     ingresos = db.obtener_ingresos()
@@ -28,3 +30,4 @@ async def crear_ingreso(ingreso: db.Ingreso):
         return {"mensaje": "Ingreso creado correctamente"}
     else:
         raise HTTPException(status_code=400, detail="error, ingreso con ese id ya existe")
+"""
