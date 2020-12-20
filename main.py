@@ -33,7 +33,7 @@ async  def agregar_transaccion(transaccion:db.Transaccion):
     if agregada_exitosamente:
         return {"mensaje":"Transacción agregada exitosamente"}
     else:
-        raise  HTTPException(status_code=400, detail="Erros, el id de la transaccion y existe ")
+        raise  HTTPException(status_code=400, detail="Error, el id de la transaccion y existe ")
 
 """
 
