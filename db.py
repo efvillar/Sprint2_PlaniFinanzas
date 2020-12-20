@@ -28,9 +28,9 @@ transaciones = {
 
 
 transaciones_I = {
-    1: Transaccion_I (id_I=1 , fechaTransaccion_I = "20-11-2020", categoria_I="Alimentación",valor_I=200000, descripcion= "Almuerzo restaurante Carne de Res"),
-    2: Transaccion_I (id_I=2 , fechaTransaccion_I = "22-11-2020", categoria_I="Vestuario",valor_I=980000,  descripcion= "Uniformes dotación trabajadores"),
-    3: Transaccion_I (id_I=3 , fechaTransaccion_I = "01-12-2020", categoria_I="Viveres",valor_I=600000,  descripcion= "Mercado mensual familiar"),
+ #   1: Transaccion_I (id_I=1 , fechaTransaccion_I = "20-11-2020", categoria_I="Alimentación",valor_I=200000, descripcion= "Almuerzo restaurante Carne de Res"),
+ #   2: Transaccion_I (id_I=2 , fechaTransaccion_I = "22-11-2020", categoria_I="Vestuario",valor_I=980000,  descripcion= "Uniformes dotación trabajadores"),
+ #   3: Transaccion_I (id_I=3 , fechaTransaccion_I = "01-12-2020", categoria_I="Viveres",valor_I=600000,  descripcion= "Mercado mensual familiar"),
 }
 
 
