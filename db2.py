@@ -8,7 +8,7 @@ class User(BaseModel):
     NUIP: str
     email: str
 
-    
+"""  
 usuarios_DB= {
     1: User  (id=1 , fechaCreacion = "01-11-2020", nombre="Edwin",NUIP="333333333", email="edwin@mintic.co"),
     2: User  (id=2 , fechaCreacion = "08-11-2020", nombre="Daniel",NUIP="44444444", email="edwin@mintic.co"),
@@ -23,7 +23,7 @@ def obtener_Usuarios():
         lista_usuarios.append(usuarios_DB[u])
     return lista_usuarios
 
-"""
+
 def agregar_usuario(usuarios_N: User):
     if usuarios_N.id in usuarios_DB:
         return False
