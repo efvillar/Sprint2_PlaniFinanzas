@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi import HTTPException
-import db
+import db, db1
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -34,3 +34,17 @@ async  def agregar_transaccion(transaccion:db.Transaccion):
         return {"mensaje":"Transacción agregada exitosamente"}
     else:
         raise  HTTPException(status_code=400, detail="Error, el id de la transaccion y existe ")
+
+
+@app.get("/ingresos/")
+async def obtener_transacciones_I():
+    transacciones_I = db1.obtener_Transaciones_I()
+    return transacciones_I
+
+@app.post("/ingresos/agregar/")
+async  def agregar_transaccion_I(transaccion:db1.Transaccion_I):
+    agregada_exitosamente=db1.agregar_transaccion:I(transaccion)
+    if agregada_exitosamente:
+        return {"mensaje":"Transacción agregada exitosamente"}
+    else:
+        raise  HTTPException(status_code=400, detail="Error, el id del ingreso y existe ")
