@@ -1,20 +1,20 @@
 from pydantic import BaseModel
 
 
-
 class Transaccion_I(BaseModel):
-    id_I: int
-    fechaTransaccion_I:str
-    categoria_I: str
-    valor_I: float
-    descripcion_I: str 
+    id: int
+    fechaTransaccion:str
+    categoria: str
+    valor: float
+    formaPago:str
+    descripcion: str
 
 
-
-transaciones_I = {
-    1: Transaccion_I (id_I=3 , fechaTransaccion_I = "01-12-2020", categoria_I="salario",valor_I=2000000,  descripcion= "Quincena 1"),
-    2: Transaccion_I (id_I=2 , fechaTransaccion_I = "08-12-2020", categoria_I="prima",valor_I=1200000,  descripcion= "Prima de Diciembre"),
-    3: Transaccion_I (id_I=3 , fechaTransaccion_I = "15-12-2020", categoria_I="salario",valor_I=2000000,  descripcion= "Quincena 2"),
+    
+transaciones = {
+    1: Transaccion_I (id=1 , fechaTransaccion = "20-11-2020", categoria="Alimentación",valor=200000, formaPago="tarjeta_débito", descripcion= "Almuerzo restaurante Carne de Res"),
+    2: Transaccion_I (id=2 , fechaTransaccion = "22-11-2020", categoria="Vestuario",valor=980000, formaPago="tajerta_crédito", descripcion= "Uniformes dotación trabajadores"),
+    3: Transaccion_I (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar"),
 }
 
 """
