@@ -23,10 +23,12 @@ def obtener_Usuarios():
         lista_usuarios.append(usuarios_DB[u])
     return lista_usuarios
 
-
+"""
 def agregar_usuario(usuarios_N: User):
     if usuarios_N.id in usuarios_DB:
         return False
     else:
         usuarios_DB[usuarios_N.id]= usuarios_N
         return True
+
+"""
