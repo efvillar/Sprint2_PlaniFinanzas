@@ -12,9 +12,9 @@ class Transaccion_I(BaseModel):
 
     
 transaciones_I = {
-    1: Transaccion_I (id=1 , fechaTransaccion = "20-11-2020", categoria="Alimentación",valor=200000, formaPago="tarjeta_débito", descripcion= "Almuerzo restaurante Carne de Res"),
-    2: Transaccion_I (id=2 , fechaTransaccion = "22-11-2020", categoria="Vestuario",valor=980000, formaPago="tajerta_crédito", descripcion= "Uniformes dotación trabajadores"),
-    3: Transaccion_I (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar"),
+    1: Transaccion_I (id=1 , fechaTransaccion = "01-11-2020", categoria="salario",valor=2000000, formaPago="tarjeta_débito", descripcion= "Quincena 1"),
+    2: Transaccion_I (id=2 , fechaTransaccion = "08-11-2020", categoria="prima",valor=1200000, formaPago="tajerta_crédito", descripcion= "Prima"),
+    3: Transaccion_I (id=3 , fechaTransaccion = "15-12-2020", categoria="salario",valor=2000000, formaPago="efectivo", descripcion= "Quincena 2"),
 }
 
 """
