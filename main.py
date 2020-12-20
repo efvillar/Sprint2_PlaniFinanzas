@@ -56,3 +56,12 @@ async def obtener_Usuarios():
     usuarios_DB = db2.obtener_Usuarios()
     return usuarios_DB
 
+
+@app.post("/usuarios/agregar/")
+async  def agregar_usuario(transaccion:db2.User):
+    agregada_exitosamente=db2.agregar_usuario(transaccion)
+    if agregada_exitosamente:
+        return {"mensaje":"Transacción agregada exitosamente"}
+    else:
+        raise  HTTPException(status_code=400, detail="Error, el id del usuario de ingreso y existe ")
+
