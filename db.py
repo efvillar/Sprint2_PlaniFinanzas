@@ -10,30 +10,12 @@ class Transaccion(BaseModel):
     descripcion: str
 
 
-class Transaccion_I(BaseModel):
-    id_I: int
-    fechaTransaccion_I:str
-    categoria_I: str
-    valor_I: float
-    descripcion_I: str  
-
-
     
 transaciones = {
     1: Transaccion (id=1 , fechaTransaccion = "20-11-2020", categoria="Alimentación",valor=200000, formaPago="tarjeta_débito", descripcion= "Almuerzo restaurante Carne de Res"),
     2: Transaccion (id=2 , fechaTransaccion = "22-11-2020", categoria="Vestuario",valor=980000, formaPago="tajerta_crédito", descripcion= "Uniformes dotación trabajadores"),
     3: Transaccion (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar"),
 }
-
-
-
-transaciones_I = {
-    1: Transaccion_I (id_I: 1,     fechaTransaccion_I:"01/12/2020",    categoria_I: "salario",    valor_I: 2000000,    descripcion_I: "Quincena 1"),
- #   2: Transaccion_I (id_I=2 , fechaTransaccion_I = "22-11-2020", categoria_I="Vestuario",valor_I=980000,  descripcion= "Uniformes dotación trabajadores"),
- #   3: Transaccion_I (id_I=3 , fechaTransaccion_I = "01-12-2020", categoria_I="Viveres",valor_I=600000,  descripcion= "Mercado mensual familiar"),
-}
-
-
 
 
 
@@ -54,18 +36,3 @@ def agregar_transaccion(transaccion: Transaccion):
         transaciones[transaccion.id]= transaccion
         return True
 
-
-
-def obtener_Transaciones_I():
-    #haga lo que tenga que hacer para conectarse a la base de datos y obtner todas las ordenes
-    lista_transacciones_I=[]
-    for i in transaciones_I:
-        lista_transacciones_I.append(transaciones_I[i])
-    return lista_transacciones_I
-
-def agregar_transaccion_I(transaccion: Transaccion_I):
-    if transaccion.id in transaciones_I:
-        return False
-    else:
-        transaciones_I[transaccion_I.id]= transaccion
-        return True
