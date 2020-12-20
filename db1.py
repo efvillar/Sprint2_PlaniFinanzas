@@ -26,7 +26,7 @@ def obtener_Transaciones_I():
     return lista_transacciones_I
 
 
-def agregar_transaccion_I(transaccion: Transaccion_I):
+def agregar_transaccion_I(transaccion_I: Transaccion_I):
     if transaccionI.id in transaciones_I:
         return False
     else:
