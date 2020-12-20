@@ -17,7 +17,7 @@ transaciones_I = {
     3: Transaccion_I (id_I=3 , fechaTransaccion_I = "15-12-2020", categoria_I="salario",valor_I=2000000,  descripcion= "Quincena 2"),
 }
 
-"""
+
 def obtener_Transaciones_I():
     #haga lo que tenga que hacer para conectarse a la base de datos y obtner todas las ordenes
     lista_transacciones_I=[]
@@ -25,6 +25,7 @@ def obtener_Transaciones_I():
         lista_transacciones_I.append(transaciones_I[i])
     return lista_transacciones_I
 
+""
 def agregar_transaccion_I(transaccion: Transaccion_I):
     if transaccion.id in transaciones_I:
         return False
