@@ -10,7 +10,7 @@ class Transaccion(BaseModel):
     descripcion: str
 
 
-class Ingresos(BaseModel):
+class Transaccion_I(BaseModel):
     id_I: int
     fechaTransaccion_I:str
     categoria_I: str
@@ -53,7 +53,7 @@ def agregar_transaccion(transaccion: Transaccion):
         transaciones[transaccion.id]= transaccion
         return True
 
-        
+
 
 def obtener_Transaciones_I():
     #haga lo que tenga que hacer para conectarse a la base de datos y obtner todas las ordenes
@@ -61,3 +61,10 @@ def obtener_Transaciones_I():
     for i in transaciones_I:
         lista_transacciones_I.append(transaciones_I[i])
     return lista_transacciones_I
+
+def agregar_transaccion_I(transaccion: Transaccion_I):
+    if transaccion.id in transaciones_I:
+        return False
+    else:
+        transaciones_I[transaccion_I.id]= transaccion
+        return True
