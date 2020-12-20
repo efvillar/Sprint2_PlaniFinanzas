@@ -1,47 +1,53 @@
 from pydantic import BaseModel
 
-class Egreso(BaseModel):
+
+class Transaccion(BaseModel):
     id: int
-    fecha: str
-    categoria_egreso: str
+    fechaTransaccion:str
+    categoria: str
     valor: float
-    forma_pago: str
+    formaPago:str
     descripcion: str
+
+"""
 
 class Ingreso(BaseModel):
     fecha: str
     categoria_ingreso: str
     valor: float
     descripcion: str
+"""
     
-egresos = {
-    1: Egreso(id=1, fecha="08-12-2020", categoria_egreso="vestuario", valor=60000, forma_pago="efectivo", descripcion="camisa verde"),
-    2: Egreso(id=2, fecha="08-12-2020", categoria_egreso="transporte", valor=10000, forma_pago="efectivo", descripcion="taxi al trabajo"),
-    3: Egreso(id=3, fecha="09-12-2020", categoria_egreso="alimentacion", valor=90000, forma_pago="tarjeta de credito", descripcion="restaurante arabe"),
-    4: Egreso(id=4, fecha="12-12-2020", categoria_egreso="educacion", valor=800000, forma_pago="tarjeta de credito", descripcion="colegio"),
-    5: Egreso(id=5, fecha="18-12-2020", categoria_egreso="alimentacion", valor=190000, forma_pago="debido", descripcion="rappi")
+transaciones = {
+    1: Transaccion (id=1 , fechaTransaccion = "20-11-2020", categoria="Alimentación",valor=200000, formaPago="tarjeta_débito", descripcion= "Almuerzo restaurante Carne de Res"),
+    2: Transaccion (id=2 , fechaTransaccion = "22-11-2020", categoria="Vestuario",valor=980000, formaPago="tajerta_crédito", descripcion= "Uniformes dotación trabajadores"),
+    3: Transaccion (id=3 , fechaTransaccion = "01-12-2020", categoria="Viveres",valor=600000, formaPago="efectivo", descripcion= "Mercado mensual familiar"),
 }
+
+"""
 
 ingresos = {
         1: Egreso(id=1, fecha="07-12-2020", categoria_ingreso="salario", valor=1500000, descripcion="prima"),
         2: Egreso(id=2, fecha="08-12-2020", categoria_ingreso="arrendamiento", valor=500000,  descripcion="casa en la guajira"),
         3: Egreso(id=3, fecha="15-12-2020", categoria_ingreso="salario", valor=1200000,  descripcion="quincena 1 de diciembre"),
         4: Egreso(id=4, fecha="16-12-2020", categoria_ingreso="otros", valor=30000000,  descripcion="venta de carro")
-
 }
+"""
 
-def obtener_egresos():
-    #haga lo que tenga que hacer para conectarse a la base de datos
-    lista_egresos = []
-    for e in egresos:
-        lista_egresos.append(egresos[e])
-    return lista_egresos
+def obtener_Transaciones():
+    #haga lo que tenga que hacer para conectarse a la base de datos y obtner todas las ordenes
+    lista_transacciones=[]
 
-def crear_egreso(egreso: Egreso):
-    if egreso.id in egresos:
+    for e in transaciones:
+        lista_transacciones.append(transaciones[e])
+    return lista_transacciones
+
+
+def agregar_transaccion(transaccion: Transaccion):
+    if transaccion.id in transaciones:
         return False
     else:
-        egresos[egreso.id] = egreso
+        transaciones[transaccion.id]= transaccion
         return True
 
 

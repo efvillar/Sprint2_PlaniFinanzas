@@ -1,20 +1,39 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
+from fastapi import HTTPException
 import db
+
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-@app.get("/egresos/")
-async def obtener_egresos():
-    egresos = db.obtener_egresos()
-    return  egresos
+origins = [
 
-@app.post("/egresos/crear/")
-async def crear_egreso(egreso: db.Egreso):
-    creada_exitosamente = db.crear_egreso(egreso)
-    if creada_exitosamente:
-        return {"mensaje": "Egreso creado correctamente"}
+    "http://localhost:8081",
+    "https://planifinanzas-front.herokuapp.com"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins= origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+
+)
+
+
+@app.get("/transacciones/")
+async def obtener_transacciones():
+    transacciones = db.obtener_Transaciones()
+    return transacciones
+
+@app.post("/transacciones/agregar/")
+async  def agregar_transaccion(transaccion:db.Transaccion):
+    agregada_exitosamente=db.agregar_transaccion(transaccion)
+    if agregada_exitosamente:
+        return {"mensaje":"Transacción agregada exitosamente"}
     else:
-        raise HTTPException(status_code=400, detail="error, egreso con ese id ya existe")
+        raise  HTTPException(status_code=400, detail="Erros, el id de la transaccion y existe ")
 
 """
 
